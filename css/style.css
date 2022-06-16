@@ -1,0 +1,394 @@
+@font-face {
+    font-family: CocaColaFont;
+    src: url('../cocacola.ttf');
+}
+
+.logo{
+    padding: 1px;
+}
+
+.logo h1{
+    font-family: CocaColaFont;
+    font-size: 100px;
+    margin-top: 0px;
+    margin-bottom: -130px;
+    margin-left: 30px;
+}
+
+.logo h2{
+    font-family: CocaColaFont;
+    font-size: 55px;
+    margin-top: 20px;
+    margin-left: 155px;
+    margin-bottom: -50px;
+}
+
+.logo h5{
+    font-family: "Felix Titling";
+    font-size: 20px;
+    margin-top: 30px;
+    margin-left: 155px;
+    margin-bottom: -30px;
+}
+
+.logo p{
+    font-family: Calibri;
+    font-size: 10px;
+    margin-top: 30px;
+    margin-left: 40px;
+    margin-bottom: -30px;
+}
+
+#content{
+    position: relative;
+    height: 78.5vh;
+    background: #5d0000;
+    color: white;
+}
+
+#content h1{
+    font-size: 15vh;
+    font-weight: 900;
+    vertical-align: middle;
+}
+#content p{
+    font-size: 3vh;
+    font-weight: 600;
+    vertical-align: middle;
+}
+
+#content .container-fluid{
+    display: flex;
+    width: auto;
+    padding-bottom: 6%;
+    box-sizing: border-box;
+    height: 85vh;
+
+}
+
+.accordion{
+    flex: 1;
+    overflow: hidden;
+    transition: 2s;
+    margin: 3%;
+    height: auto;
+    border-radius: 35px;
+}
+
+.accordion:hover {
+    flex: 1 1 50%;
+}
+
+
+.coka{
+    background-color: #910000;
+    background-image: url("../image/CocaColaLogo.png"), url("../image/coke-icon.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 100%;
+}
+
+.coka:hover{
+    background-image: url("../image/cocaButtle.jpg");
+    opacity: 0.7;
+}
+
+.coka h1{
+    position: absolute;
+    font-family: CocaColaFont;
+    color: #ff0000;
+    opacity: 0;
+    padding-top: 5%;
+    padding-left: 1%;
+    transition: 1s;
+}
+
+.coka p{
+    position: absolute;
+    opacity: 0;
+    color: white;
+    padding-top: 15%;
+    padding-left: 2%;
+    padding-right: 40%;
+    transition: 1s;
+}
+
+.coka button{
+    position: absolute;
+    opacity: 0;
+    border: none;
+    border-radius: 10px;
+    background-color: #470011;
+    color: #f3ecec;
+    top: 70%;
+    left: 25%;
+    padding: 15px;
+    transition: 2.5s;
+}
+
+.coka:hover h1{
+    padding-left: 3%;
+    opacity: 100;
+    font-size: 50px;
+}
+
+.coka:hover p{
+    font-family: Arial;
+    opacity: 100;
+    padding-left: 3%;
+}
+
+.coka:hover button{
+    opacity: 100%;
+    font-size: 3vh;
+    left: 50%;
+}
+
+.fanta{
+    background-color: #cf4700;
+    background-image: url("../image/fantalogo.png"), url("../image/fanta-icon.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 100%;
+}
+
+.fanta:hover{
+    background-image: url("../image/funtaSlide.jpg");
+    opacity: 0.7;
+}
+
+.fanta h1{
+    position: absolute;
+    font-family: CocaColaFont;
+    color: #ff7a14;
+    opacity: 0;
+    padding-top: 5%;
+    padding-left: 1%;
+    padding-right: 25%;
+    transition: 1s;
+}
+
+.fanta p{
+    position: absolute;
+    opacity: 0;
+    color: white;
+    padding-top: 15%;
+    padding-left: 2%;
+    padding-right: 23%;
+    transition: 1s;
+}
+
+.fanta button{
+    position: absolute;
+    opacity: 0;
+    border: none;
+    border-radius: 10px;
+    background-color: #921e00;
+    color: #f3ecec;
+    top: 70%;
+    left: 25%;
+    padding: 15px;
+    transition: 2.5s;
+}
+
+.fanta:hover h1{
+    padding-left: 3%;
+    opacity: 100;
+    font-size: 50px;
+}
+
+.fanta:hover p{
+    font-family: Arial;
+    opacity: 100;
+    padding-left: 3%;
+}
+
+.fanta:hover button{
+    opacity: 100%;
+    font-size: 3vh;
+    left: 65%;
+}
+
+.sprite{
+    background-color: #018114;
+    background-image: url("../image/spritelogo.png"), url("../image/sprite-icon.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 100%;
+}
+
+.sprite:hover{
+    background-image: url("../image/spriteSlide.jpg");
+    opacity: 0.7;
+}
+
+.sprite h1{
+    position: absolute;
+    font-family: CocaColaFont;
+    color: #59ff00;
+    opacity: 0;
+    padding-top: 5%;
+    padding-left: 1%;
+    transition: 1s;
+}
+
+.sprite p{
+    position: absolute;
+    opacity: 0;
+    color: #000000;
+    padding-top: 15%;
+    padding-left: 2%;
+    padding-right: 5%;
+    transition: 1s;
+}
+
+.sprite button{
+    position: absolute;
+    opacity: 0;
+    border: none;
+    border-radius: 10px;
+    background-color: #26d400;
+    color: #f3ecec;
+    top: 70%;
+    left: 55%;
+    padding: 15px;
+    transition: 2.5s;
+}
+
+.sprite:hover h1{
+    padding-left: 3%;
+    opacity: 100;
+    font-size: 50px;
+}
+
+.sprite:hover p{
+    font-family: Arial;
+    opacity: 100;
+    padding-left: 3%;
+    padding-right: 5%;
+}
+
+.sprite:hover button{
+    opacity: 100%;
+    font-size: 3vh;
+    left: 80%;
+}
+
+footer{
+    height: 10vh;
+    background: #101010;
+}
+
+#showModel{
+    height: 48.5vh;
+    background: #5d0000;
+    color: #ffffff;
+}
+
+#showModel .switch{
+    position: absolute;
+    margin-top: 5%;
+    margin-left: 69%;
+    padding: 1% 2%;
+    background: #400404;
+    border-radius: 25px;
+}
+
+.switchBtn{
+    padding: 20px 8px;
+    margin-top: 8%;
+    border-radius: 25px;
+    box-sizing: border-box;
+    border: none;
+    background-color: #580505;
+    color: white;
+}
+
+.switchBtn:hover{
+    background-color: #940808;
+}
+
+#model{
+    position: relative;
+    height: 30vh;
+    background: #400000;
+    color: #ffffff;
+}
+
+#model .row{
+    margin: auto auto auto 10%;
+}
+
+#model .row .col-md-3{
+    margin: 2%;
+    background-color: #280909;
+    border-radius: 25px;
+    height: 23vh;
+}
+
+#model .row .col-md-3 h1{
+    font-size: 25px;
+    text-align: center;
+    color: #a0a0a0;
+    padding-top: 25px;
+}
+
+#model .modalBtn{
+    text-align: center;
+    border-radius: 10px;
+    box-sizing: border-box;
+    border: none;
+    background-color: #580505;
+    color: white;
+    margin-top: 18px;
+    margin-left: 2px;
+    width: 32%;
+    font-size: 23px;
+    font-weight: 500;
+    padding: 4px;
+}
+
+#model .modalBtn:hover{
+    background-color: #940808;
+}
+
+
+#showModel .modelBox{
+    position: absolute;
+    padding: 2% 13%;
+}
+
+#showModel .informBox{
+    position: absolute;
+    left: 39%;
+    top: 17%;
+    right: 33%;
+    background-color: #5f3805;
+    color: white;
+    border-radius: 15px;
+}
+
+#showModel .informBox p{
+    margin-right: 5%;
+}
+
+#cokaState{
+    background: transparent;
+}
+
+.showCase{
+    background-color: #453a3a;
+    position: absolute;
+    left: 1%;
+    top: 28%;
+    padding: 25px 1px 25px 25px;
+    border-radius: 15px;
+    margin: auto;
+}
+
+#content .showCase img{
+    width: 33%;
+}

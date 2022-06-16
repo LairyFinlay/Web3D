@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/x3dom.css">
+    <title>Model</title>
+</head>
+<header>
+    <nav class="navbar navbar-expand-lg bg-black navbar-dark">
+        <div class="container-fluid">
+            <div class="logo">
+                <a href="index.html" class="navbar-brand">
+                    <h1>Coca</h1>
+                    <h2>Cola</h2>
+                    <h5>Story</h5>
+                    <p>CocaCola.. Makes Live Feel Better</p>
+                </a>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navmenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#Model" class="nav-link">Model</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#Contact" class="nav-link" onclick="contact()">Contact</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+
+<section id="showModel">
+    <div class="switch">
+        <div class="row">
+            <button onclick="showModel('coka','cokaInfo')" type="button" class="switchBtn active">CocaCola</button>
+            <button onclick="showModel('fanta','fantaInfo')" type="button" class="switchBtn">Fanta</button>
+            <button onclick="showModel('sprite','spriteInfo')" type="button" class="switchBtn">Sprite</button>
+        </div>
+    </div>
+    <div class="modelBox">
+        <div id="coka">
+            <x3d  x='0px' y='0px' width='400px' height='400px'>
+                <scene>
+                    <inline namespacename="model" mapdeftoid="true" url="3dmodel/cocaGlass.x3d"></inline>
+                </scene>
+            </x3d>
+        </div>
+        <div id="fanta" style="display: none">
+            <x3d  x='0px' y='0px' width='400px' height='400px'>
+                <scene>
+                    <inline namespacename="model" mapdeftoid="true" url="3dmodel/fantaBottle.x3d"></inline>
+                </scene>
+            </x3d>
+        </div>
+        <div id="sprite" style="display: none">
+            <x3d x='0px' y='0px' width='400px' height='400px'>
+                <scene>
+                    <inline namespacename="model" mapdeftoid="true" url="3dmodel/spriteCan.x3d"></inline>
+                </scene>
+            </x3d>
+        </div>
+        <div id="cokaWireframe" style="display: none">
+            <x3d  showStat='false' showLog='true' x='0px' y='0px' width='400px' height='400px'>
+                <scene>
+                    <inline namespacename="model" mapdeftoid="true" url="3dmodel/cokaWireframeGlass.x3d"></inline>
+                </scene>
+            </x3d>
+        </div>
+        <div id="fantaWireframe" style="display: none">
+            <x3d  showStat='false' showLog='true' x='0px' y='0px' width='400px' height='400px'>
+                <scene>
+                    <inline namespacename="model" mapdeftoid="true" url="3dmodel/fantaWireframeBottle.x3d"></inline>
+                </scene>
+            </x3d>
+        </div>
+        <div id="spriteWireframe" style="display: none">
+            <x3d  showStat='false' showLog='true' x='0px' y='0px' width='400px' height='400px'>
+                <scene>
+                    <inline namespacename="model" mapdeftoid="true" url="3dmodel/spriteWireframeCan.x3d"></inline>
+                </scene>
+            </x3d>
+        </div>
+    </div>
+    <div class="informBox">
+        <div id="cokaInfo" style="">
+            <h1>Coca Glass Bottle</h1>
+            <p>Coca Glass Bottle was created by Blender, using a cylinder to make its body and detail. It is using a cylinder to make its body and detail. Texture is cokaTexture.jpg</p>
+        </div>
+        <div id="fantaInfo" style="display: none">
+            <h1>Fanta Bottle</h1>
+            <p>The texture is using fantaTexture.jpg</p>
+        </div>
+        <div id="spriteInfo" style="display: none">
+            <h1>Sprite Can</h1>
+            <p>The texture is using spriteTexture.jpg</p>
+        </div>
+    </div>
+
+</section>
+
+<section id="model">
+    <div class="row">
+        <div class="col-md-3">
+            <h1>Camera Control</h1>
+            <button type="button" class="modalBtn" onclick="cameraFront()">Front</button>
+            <button type="button" class="modalBtn" onclick="cameraBack()">Back</button>
+            <button type="button" class="modalBtn" onclick="cameraLeft()">Left</button>
+            <button type="button" class="modalBtn" onclick="cameraRight()">Right</button>
+            <button type="button" class="modalBtn" onclick="cameraTop()">Top</button>
+            <button type="button" class="modalBtn" onclick="cameraBottom()">Bottom</button>
+        </div>
+        <div class="col-md-3">
+            <h1>Model Control</h1>
+            <button type="button" class="modalBtn" onclick="spinX()">RotX</button>
+            <button type="button" class="modalBtn" onclick="spinY()">RotY</button>
+            <button type="button" class="modalBtn" onclick="spinZ()">RotZ</button>
+            <button type="button" class="modalBtn" onclick="stopRotation()">Stop</button>
+            <button type="button" class="modalBtn" onclick="showModelWF()">WireFrame</button>
+        </div>
+        <div class="col-md-3">
+            <h1>Lighting Control</h1>
+            <button type="button" class="modalBtn" onclick="turnDefault()">Default</button>
+            <button type="button" class="modalBtn">Target</button>
+            <button type="button" class="modalBtn" onclick="headlight()">Headlight</button>
+            <button type="button" class="modalBtn" onclick="turnOmni()">Omni</button>
+        </div>
+    </div>
+</section>
+
+<footer class="text-center text-white p-4">
+    <div class="container-fluid">
+        <div class="col-md-3">
+            <p class="lead">Copyright &copy; 2021 Web 3D Model</p>
+        </div>
+    </div>
+</footer>
+<script src="js/switchModel.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/script.js"></script>
+<script src="js/x3dom.js"></script>
+</body>
+</html>
